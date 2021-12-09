@@ -19,13 +19,21 @@ public class seminario {
 	 private Long idSeminario;
 	 
 	 @Column(name = "seminarion")
-	    private String Seminario;
+	    private String nomseminario;
 
 	    @Column(name = "seminario_fecha")
 	    private Date semiFecha;
 	    
 	    @Column(name = "servicio")
-	    private String ServicioEspiritual;
+	    private String servicioEspiritual;
+
+		public String getServicioEspiritual() {
+			return servicioEspiritual;
+		}
+
+		public void setServicioEspiritual(String servicioEspiritual) {
+			this.servicioEspiritual = servicioEspiritual;
+		}
 
 		public Long getIdSeminario() {
 			return idSeminario;
@@ -35,12 +43,13 @@ public class seminario {
 			this.idSeminario = idSeminario;
 		}
 
-		public String getSeminario() {
-			return Seminario;
+		
+		public String getNomseminario() {
+			return nomseminario;
 		}
 
-		public void setSeminario(String seminario) {
-			Seminario = seminario;
+		public void setNomseminario(String nomseminario) {
+			this.nomseminario = nomseminario;
 		}
 
 		public Date getSemiFecha() {
@@ -51,13 +60,7 @@ public class seminario {
 			this.semiFecha = semiFecha;
 		}
 
-		public String getServicioEspiritual() {
-			return ServicioEspiritual;
-		}
-
-		public void setServicioEspiritual(String servicioEspiritual) {
-			ServicioEspiritual = servicioEspiritual;
-		}
+		
 	    
 
 	
