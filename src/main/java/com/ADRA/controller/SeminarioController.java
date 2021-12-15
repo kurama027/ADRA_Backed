@@ -55,7 +55,7 @@ public class SeminarioController {
 	    } 
 
 	    @ApiOperation(value = "Actualiza un Seminario")
-	    @PutMapping
+	    @PutMapping(value = "/{idSeminario}")
 	    public ResponseEntity<?> update(@RequestBody seminario semi, HttpServletRequest request) {
 	        HashMap<String, Object> result = new HashMap<>();
 	        seminario data = semiService.findById(semi.getIdSeminario());

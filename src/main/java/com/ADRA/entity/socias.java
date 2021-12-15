@@ -25,7 +25,8 @@ public class socias {
 	    private String Apellido;
 
 	    @Column(name = "dni")
-	    private Long DNI;
+	    private Long DNI; 
+	    
 
 		public Long getIdSocias() {
 			return idSocias;

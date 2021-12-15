@@ -13,7 +13,33 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "capacitaciones")
 public class capacitacion {
-	 @Id
+	
+	private String name;
+    private String url;
+	
+    public capacitacion() {
+    }
+    
+    public capacitacion(String name, String url) {
+    }
+    
+	 public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
+
+	@Id
 	 @Column(name = "id_capaciatacion")
 	 @GeneratedValue(strategy = GenerationType.IDENTITY)
 	 private Long idCapacitacion;
@@ -25,21 +51,21 @@ public class capacitacion {
 	    private String modulos;
 
 	    @Column(name = "sesiones")
-	    private Long sesiones;
+	    private String sesiones;
 	    
-	    @Column(name = "materiales")
+	    @Column(name = "capa_fecha")
+	    private Date capaFecha;
+
+		@Column(name = "capa_fechafin")
+	    private Date capaFechafin;
+
+		@Column(name = "materiales")
 	    private String materiales;
+		
+		
 
-	    public Long getIdCapacitacion() {
+		public Long getIdCapacitacion() {
 			return idCapacitacion;
-		}
-
-		public Long getSesiones() {
-			return sesiones;
-		}
-
-		public void setSesiones(Long sesiones) {
-			this.sesiones = sesiones;
 		}
 
 		public void setIdCapacitacion(Long idCapacitacion) {
@@ -49,8 +75,6 @@ public class capacitacion {
 		public String getNomCapaciatacion() {
 			return nomCapaciatacion;
 		}
-
-		
 
 		public void setNomCapaciatacion(String nomCapaciatacion) {
 			this.nomCapaciatacion = nomCapaciatacion;
@@ -64,14 +88,12 @@ public class capacitacion {
 			this.modulos = modulos;
 		}
 
-		
-
-		public String getMateriales() {
-			return materiales;
+		public String getSesiones() {
+			return sesiones;
 		}
 
-		public void setMateriales(String materiales) {
-			this.materiales = materiales;
+		public void setSesiones(String sesiones) {
+			this.sesiones = sesiones;
 		}
 
 		public Date getCapaFecha() {
@@ -82,9 +104,22 @@ public class capacitacion {
 			this.capaFecha = capaFecha;
 		}
 
-		@Column(name = "capa_fecha")
-	    private Date capaFecha;
+		public Date getCapaFechafin() {
+			return capaFechafin;
+		}
 
-	
-	    
+		public void setCapaFechafin(Date capaFechafin) {
+			this.capaFechafin = capaFechafin;
+		}
+
+		public String getMateriales() {
+			return materiales;
+		}
+
+		public void setMateriales(String materiales) {
+			this.materiales = materiales;
+		}
+ 
+	 
+
 }

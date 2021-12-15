@@ -20,11 +20,34 @@ public class seminario {
 	 
 	 @Column(name = "seminarion")
 	    private String nomseminario;
+	 
+	 @Column(name = "des")
+	    private String des; 
+	 
 
-	    @Column(name = "seminario_fecha")
+	public String getDes() {
+		return des;
+	}
+
+	public void setDes(String des) {
+		this.des = des;
+	}
+
+		@Column(name = "seminario_fecha")
 	    private Date semiFecha;
 	    
-	    @Column(name = "servicio")
+	    @Column(name = "seminario_fechafin")
+	    private Date semiFechafin;
+	    
+	    public Date getSemiFechafin() {
+			return semiFechafin;
+		}
+
+		public void setSemiFechafin(Date semiFechafin) {
+			this.semiFechafin = semiFechafin;
+		}
+
+		@Column(name = "servicio")
 	    private String servicioEspiritual;
 
 		public String getServicioEspiritual() {
